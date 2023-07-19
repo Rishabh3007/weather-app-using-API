@@ -10,10 +10,6 @@ app.get('/',(req,res)=>{
     res.send('Welcome to the Home Page');
 });
 
-app.get('/about',(req,res)=>{
-    res.send('Welcome to the about Page');
-});
-
 app.get('/weather',(req,res)=>{
     res.send('Welcome to the weather Page');
 });

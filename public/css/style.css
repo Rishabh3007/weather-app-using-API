@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+:root{
+    --main-bg: #39383c;
+    --main-color: #c664cd;
+}
+
+html{
+    font-size: 62.5%; /* 1rem = 10px which makes websit responsive */
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+    padding: 1rem 0;
+}
+
+.navbar-nav .nav-link{
+    margin-left: 2rem;
+}
+
+.navbar a{  
+    color: white;
+    font-size: 1.8rem;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar-toggler{
+    color: white;
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 3s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot{ 
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
