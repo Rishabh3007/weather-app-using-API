@@ -16,6 +16,12 @@ html{
     font-size: 62.5%; /* 1rem = 10px which makes websit responsive */
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .row{
     margin: 0;
 }
@@ -23,6 +29,7 @@ html{
 .main_menu{
     background-color: var(--main-bg);
     padding: 1rem 0;
+    width: 100%;
 }
 
 .navbar-nav .nav-link{
@@ -55,4 +62,86 @@ html{
     100%{
         transform: rotate(360deg);
     }
+}
+
+.main_content{
+    display: flex;
+    flex-direction: row;
+}
+
+.main_header_left{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h1{
+    margin: 1rem 0 2rem 0;
+    font-size: 3.5rem;
+}
+
+.main_header_left .text_clr{
+    color: var(--main-color);
+}
+
+.main_header_left button{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.6rem 1.7rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.main_header_left button:hover{
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.main_header_right{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_right .carousel-item .w{
+    width: 100%;
+}
+
+/* there are two divs left and right make it responsive for mobile. for mobile the right div should go below left div */
+@media(max-width: 768px){
+    .main_content{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+}
+
+footer{
+    background-color: var(--main-bg);
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 5rem;
 }
